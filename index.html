@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>International Tip Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Tip Calculator</h1>
+
+      <div class="currency-info">
+        <p>$1 USD = €0.95 EUR</p>
+        <p>$1 USD = ₹85 INR</p>
+      </div>
+
+      <form id="tipForm">
+        <!-- Bill -->
+        <label>Bill Total ($)</label>
+        <input type="text" id="billTotal" />
+
+        <!-- Tax Exempt -->
+        <div class="row">
+          <label>Tax Exempt</label>
+          <input type="checkbox" id="taxExempt" />
+        </div>
+
+        <!-- Bill with Tax -->
+        <label>Total Bill with Tax (11%)</label>
+        <input type="text" id="billWithTax" disabled />
+
+        <!-- Currency -->
+        <label>Select Currency</label>
+        <select id="currency">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="INR">INR (₹)</option>
+        </select>
+
+        <!-- Slider -->
+        <label>Tip (%)</label>
+        <input type="range" id="tipRange" min="0" max="100" value="0" />
+
+        <!-- Tip % -->
+        <label>Tip Percentage</label>
+        <input type="text" id="tipPercentage" disabled />
+
+        <!-- Tip Amount -->
+        <label>Converted Tip Amount</label>
+        <input type="text" id="tipAmount" disabled />
+
+        <!-- Bill + Tip -->
+        <label>Total Bill with Tip</label>
+        <input type="text" id="billWithTip" disabled />
+
+        <!-- Final -->
+        <label>Converted Total Bill with Tip and Tax</label>
+        <input type="text" id="billWithTipAndTax" disabled />
+
+        <p id="errorMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
